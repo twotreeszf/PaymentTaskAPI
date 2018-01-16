@@ -1,0 +1,35 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Payment task API
+
+## Query task [/query_task]
+
+### Query a task for payment [GET]
+
++ Response 200 (application/json)
+
+        {
+            "result" : "ok",
+            "taskId" : "666",
+            "productId" : "1",
+            "devi" : "f0acb26a9d935043bfcf55f7b3e90460f17d5fd5",
+            "userId" : "106962402",
+            "sessionId" : "2092e1I3IPcWUKTgZFqk9uph5Z2Tj0qm6QaRsyn6fRSuSaNFWr"
+        }
+
+
+## Report task [/report_task]
+### Report the task finished [POST]
+
++ Attributes
+    + param1: taskId (string) - The finished task id
++ Request (application/x-www-form-urlencoded)
+        
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "result": "ok"
+            }
